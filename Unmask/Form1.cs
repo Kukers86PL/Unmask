@@ -31,7 +31,14 @@ namespace Unmask
 
         private void button_Click(object sender, EventArgs e)
         {
-            ((Button)sender).BackColor = Color.Green;
+            if (((Button)sender).BackColor == Color.Green)
+            {
+                ((Button)sender).BackColor = SystemColors.Control;
+            }
+            else
+            {
+                ((Button)sender).BackColor = Color.Green;
+            }
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
